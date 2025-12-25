@@ -4,7 +4,7 @@ import { PaymentPage } from "@/components/PaymentPage"
 
 type Page = "checkout" | "payment"
 
-function App() {
+function App() { // basic checkout page without payhere intergration
   const [currentPage, setCurrentPage] = useState<Page>("checkout")
   const [orderSummary, setOrderSummary] = useState({
     subtotal: 4600,
@@ -19,7 +19,7 @@ function App() {
     window.scrollTo(0, 0)
   }
 
-  const handleBackToCheckout = () => {
+  const handleBackToCheckout = () => { // handle checkout
     setCurrentPage("checkout")
     window.scrollTo(0, 0)
   }
